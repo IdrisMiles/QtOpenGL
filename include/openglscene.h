@@ -2,8 +2,13 @@
 #define OPENGLSCENE_H
 
 
+#include <GL/glew.h>
+//#include <GL/gl.h>
+//#include <GL/glu.h>
+//#include <GL/glext.h>
+
 #include <QOpenGLWidget>
-#include <QOpenGLFunctions>
+#include <QOpenGLContext>
 #include <QOpenGLShaderProgram>
 #include <QOpenGLVertexArrayObject>
 #include <QOpenGLBuffer>
@@ -13,7 +18,7 @@
 
 
 
-class OpenGLScene : public QOpenGLWidget, protected QOpenGLFunctions
+class OpenGLScene : public QOpenGLWidget
 {
 
     Q_OBJECT

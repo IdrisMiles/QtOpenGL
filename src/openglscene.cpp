@@ -124,7 +124,9 @@ void OpenGLScene::initializeGL()
 {
     connect(context(), &QOpenGLContext::aboutToBeDestroyed, this, &OpenGLScene::cleanup);
 
-    initializeOpenGLFunctions();
+    glewInit();
+
+    //initializeOpenGLFunctions();
     glClearColor(0.4, 0.4, 0.4, 1);
 
     // setup shaders
@@ -186,8 +188,10 @@ void OpenGLScene::initializeDemoTriangle()
 
     glEnableVertexAttribArray( 0);
     glEnableVertexAttribArray(1);
+
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), 0);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), reinterpret_cast<void *>(3 * sizeof(GLfloat)));
+
 
     m_vbo.release();
     m_vao.release();

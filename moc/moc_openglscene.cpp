@@ -194,8 +194,6 @@ void *OpenGLScene::qt_metacast(const char *_clname)
     if (!_clname) return Q_NULLPTR;
     if (!strcmp(_clname, qt_meta_stringdata_OpenGLScene.stringdata0))
         return static_cast<void*>(const_cast< OpenGLScene*>(this));
-    if (!strcmp(_clname, "QOpenGLFunctions"))
-        return static_cast< QOpenGLFunctions*>(const_cast< OpenGLScene*>(this));
     return QOpenGLWidget::qt_metacast(_clname);
 }
 
